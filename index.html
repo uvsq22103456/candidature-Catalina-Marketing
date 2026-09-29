@@ -8,114 +8,113 @@
     
     <style>
         :root {
-            --black: #141414;
-            --dark-card: #1c1c1c;
-            --white: #ffffff;
-            --off-white: #fbfaf8;
-            --gold: #c5a059;
-            --gray: #a0a0a0;
-            --light-border: #2a2a2a;
+            --bg-main: #fcfbf9;
+            --card-bg: #ffffff;
+            --text-main: #1f1f1f;
+            --text-muted: #555555;
+            --bronze: #9e7d3b;
+            --border: #e6e2d8;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { font-family: 'Montserrat', sans-serif; background-color: var(--black); color: var(--white); line-height: 1.8; overflow-x: hidden; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--bg-main); color: var(--text-main); line-height: 1.8; overflow-x: hidden; }
 
-        /* NAVIGATION MINIMALISTE SOMBRE */
+        /* NAVIGATION MINIMALISTE ÉPURÉE */
         nav {
-            position: fixed; top: 0; width: 100%; background: rgba(20, 20, 20, 0.95); backdrop-filter: blur(10px);
-            display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; z-index: 1000; border-bottom: 1px solid var(--light-border);
+            position: fixed; top: 0; width: 100%; background: rgba(252, 251, 249, 0.92); backdrop-filter: blur(10px);
+            display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; z-index: 1000; border-bottom: 1px solid var(--border);
         }
-        .nav-logo { font-family: 'Bodoni Moda', serif; font-size: 1.1rem; font-weight: 700; text-decoration: none; color: var(--white); letter-spacing: 2px; text-transform: uppercase;}
-        .nav-logo span { color: var(--gold); }
-        .nav-links a { margin-left: 30px; text-decoration: none; color: var(--gray); font-size: 0.75rem; text-transform: uppercase; font-weight: 500; letter-spacing: 1.5px; transition: color 0.4s; }
-        .nav-links a:hover { color: var(--gold); }
+        .nav-logo { font-family: 'Bodoni Moda', serif; font-size: 1.1rem; font-weight: 700; text-decoration: none; color: var(--text-main); letter-spacing: 2px; text-transform: uppercase;}
+        .nav-logo span { color: var(--bronze); }
+        .nav-links a { margin-left: 30px; text-decoration: none; color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; font-weight: 500; letter-spacing: 1.5px; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--bronze); }
 
-        /* HERO SECTION SOMBRE & CHIC */
+        /* HERO SECTION CLAIRE */
         .hero {
             height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
-            background-color: var(--black);
-            background-image: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.95)), url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-color: var(--bg-main);
+            background-image: linear-gradient(rgba(252, 251, 249, 0.85), rgba(252, 251, 249, 0.95)), url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             background-size: cover; background-position: center; background-attachment: fixed;
-            color: var(--white); padding: 0 20px;
+            color: var(--text-main); padding: 0 20px;
         }
-        .hero-subtitle { font-size: 0.85rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 25px; color: var(--gold); font-weight: 400; animation: fadeInDown 1s ease; }
+        .hero-subtitle { font-size: 0.85rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 25px; color: var(--bronze); font-weight: 500; animation: fadeInDown 1s ease; }
         .hero-title { font-family: 'Bodoni Moda', serif; font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.2; text-transform: uppercase; margin-bottom: 35px; animation: fadeInUp 1s ease; letter-spacing: 1px;}
         .hero-btn { 
-            padding: 15px 45px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; 
-            text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; transition: 0.5s; animation: fadeIn 2s ease;
+            padding: 15px 45px; border: 1px solid var(--bronze); color: var(--bronze); text-decoration: none; 
+            text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; transition: 0.4s; animation: fadeIn 2s ease; font-weight: 500;
         }
-        .hero-btn:hover { background: var(--gold); color: var(--black); }
+        .hero-btn:hover { background: var(--bronze); color: #ffffff; }
 
         section { padding: 120px 10%; }
         
         /* CITATION / VISION */
         .vision-quote { text-align: center; padding: 0 10% 80px 10%; margin-top: -40px; }
-        .vision-quote p { font-family: 'Bodoni Moda', serif; font-size: 1.8rem; color: var(--white); font-style: italic; line-height: 1.6; }
-        .vision-quote span { display: block; margin-top: 20px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); }
+        .vision-quote p { font-family: 'Bodoni Moda', serif; font-size: 1.8rem; color: var(--text-main); font-style: italic; line-height: 1.6; }
+        .vision-quote span { display: block; margin-top: 20px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--bronze); font-weight: 600; }
 
-        /* CARDS SYNERGIE */
+        /* CARDS EXPERTISE HUMANISÉE */
         .synergy-container { display: flex; gap: 30px; flex-wrap: wrap; margin-top: 20px; }
         .syn-card {
-            flex: 1; min-width: 300px; background: var(--dark-card); padding: 50px; border: 1px solid var(--light-border);
-            transition: all 0.5s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            flex: 1; min-width: 300px; background: var(--card-bg); padding: 50px; border: 1px solid var(--border);
+            transition: all 0.4s ease; box-shadow: 0 5px 20px rgba(0,0,0,0.03);
         }
-        .syn-card:hover { transform: translateY(-5px); border-color: var(--gold); }
-        .syn-card h3 { font-family: 'Bodoni Moda', serif; font-size: 1.6rem; margin-bottom: 20px; color: var(--gold); border-bottom: 1px solid var(--light-border); padding-bottom: 15px; }
-        .syn-card p { font-size: 0.95rem; color: var(--gray); margin-bottom: 25px; }
+        .syn-card:hover { transform: translateY(-3px); border-color: var(--bronze); }
+        .syn-card h3 { font-family: 'Bodoni Moda', serif; font-size: 1.5rem; margin-bottom: 20px; color: var(--text-main); border-bottom: 1px solid var(--border); padding-bottom: 15px; }
+        .syn-card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 25px; }
         .syn-card ul { list-style: none; }
-        .syn-card li { margin-bottom: 15px; font-size: 0.9rem; line-height: 1.7; color: var(--white); padding-left: 20px; position: relative; }
-        .syn-card li::before { content: '✦'; position: absolute; left: 0; color: var(--gold); font-size: 0.8rem; top: 2px; }
+        .syn-card li { margin-bottom: 15px; font-size: 0.9rem; line-height: 1.6; color: var(--text-main); padding-left: 20px; position: relative; }
+        .syn-card li::before { content: '✦'; position: absolute; left: 0; color: var(--bronze); font-size: 0.8rem; top: 1px; }
 
         /* SECTION PARCOURS */
         .editorial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-        .ed-text h2 { font-family: 'Bodoni Moda', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: var(--white); }
-        .ed-text p.drop-cap::first-letter { float: left; font-family: 'Bodoni Moda', serif; font-size: 4rem; line-height: 0.8; padding-right: 15px; color: var(--gold); }
-        .ed-text p.intro { margin-bottom: 40px; font-size: 1.05rem; color: var(--gray); }
+        .ed-text h2 { font-family: 'Bodoni Moda', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: var(--text-main); }
+        .ed-text p.drop-cap::first-letter { float: left; font-family: 'Bodoni Moda', serif; font-size: 4rem; line-height: 0.8; padding-right: 15px; color: var(--bronze); }
+        .ed-text p.intro { margin-bottom: 40px; font-size: 1.05rem; color: var(--text-muted); }
         
         .experience-block { margin-bottom: 35px; }
-        .experience-block h4 { font-size: 0.75rem; text-transform: uppercase; color: var(--gold); letter-spacing: 2px; margin-bottom: 5px; font-weight: 500; }
-        .experience-block h3 { font-family: 'Bodoni Moda', serif; font-size: 1.4rem; color: var(--white); margin-bottom: 10px; }
-        .experience-block p { font-size: 0.95rem; color: var(--gray); line-height: 1.7; }
+        .experience-block h4 { font-size: 0.75rem; text-transform: uppercase; color: var(--bronze); letter-spacing: 2px; margin-bottom: 5px; font-weight: 600; }
+        .experience-block h3 { font-family: 'Bodoni Moda', serif; font-size: 1.4rem; color: var(--text-main); margin-bottom: 10px; }
+        .experience-block p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; }
 
-        /* IMAGE ÉLÉGANTE (prête pour ton image locale 'luxe.jpg') */
+        /* IMAGE ÉLÉGANTE (charge ton image locale 'luxe.jpg') */
         .image-elegance {
-            background-color: var(--dark-card);
+            background-color: var(--border);
             background-image: url('luxe.jpg'); 
             background-size: cover; 
             background-position: center; 
             height: 700px; 
             width: 100%; 
-            box-shadow: -15px 15px 0px var(--black), -15px 15px 0px 1px var(--gold);
+            box-shadow: -15px 15px 0px #f4f1ea, -15px 15px 0px 1px var(--border);
         }
 
         /* RECOMMANDATIONS */
-        .values-section { background: var(--dark-card); text-align: center; padding: 100px 10%; border-top: 1px solid var(--light-border); border-bottom: 1px solid var(--light-border); }
-        .values-section h2 { font-family: 'Bodoni Moda', serif; font-size: 2.5rem; margin-bottom: 50px; color: var(--white); }
+        .values-section { background: #f5f3ec; text-align: center; padding: 100px 10%; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .values-section h2 { font-family: 'Bodoni Moda', serif; font-size: 2.5rem; margin-bottom: 50px; color: var(--text-main); }
         .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        .value-card { padding: 40px; border: 1px solid var(--light-border); background: var(--black); transition: 0.4s; }
-        .value-card:hover { border-color: var(--gold); }
-        .value-card p { font-family: 'Bodoni Moda', serif; font-size: 1.2rem; font-style: italic; line-height: 1.6; margin-bottom: 20px; color: var(--white); }
-        .value-card h4 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); }
+        .value-card { padding: 40px; border: 1px solid var(--border); background: var(--card-bg); transition: 0.4s; }
+        .value-card:hover { border-color: var(--bronze); }
+        .value-card p { font-family: 'Bodoni Moda', serif; font-size: 1.15rem; font-style: italic; line-height: 1.6; margin-bottom: 20px; color: var(--text-main); }
+        .value-card h4 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--bronze); font-weight: 600; }
 
         /* CONTACT & DOWNLOAD */
-        .contact-section { text-align: center; background: var(--black); }
+        .contact-section { text-align: center; background: var(--bg-main); }
         .contact-info { display: flex; justify-content: center; gap: 30px; margin-bottom: 50px; flex-wrap: wrap; }
         .contact-info a { 
-            font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 500; color: var(--white); text-decoration: none; 
-            padding: 15px 30px; border: 1px solid var(--light-border); background: var(--dark-card); transition: 0.4s;
+            font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 500; color: var(--text-main); text-decoration: none; 
+            padding: 15px 30px; border: 1px solid var(--border); background: var(--card-bg); transition: 0.4s;
         }
-        .contact-info a:hover { border-color: var(--gold); color: var(--gold); }
+        .contact-info a:hover { border-color: var(--bronze); color: var(--bronze); }
 
-        .download-box { margin-top: 20px; padding: 60px; background: var(--dark-card); border: 1px solid var(--light-border); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .download-box { margin-top: 20px; padding: 60px; background: var(--card-bg); border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
         .btn-download {
-            display: inline-block; padding: 15px 35px; background: var(--gold); color: var(--black); 
+            display: inline-block; padding: 15px 35px; background: var(--bronze); color: #ffffff; 
             text-transform: uppercase; font-weight: 600; letter-spacing: 2px; text-decoration: none; 
-            transition: 0.4s; font-size: 0.8rem; border: 1px solid var(--gold); margin: 5px;
+            transition: 0.4s; font-size: 0.8rem; border: 1px solid var(--bronze); margin: 5px;
         }
-        .btn-download:hover { background: transparent; color: var(--gold); }
-        .btn-outline { background: transparent; color: var(--white); border-color: var(--light-border); }
-        .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+        .btn-download:hover { background: transparent; color: var(--bronze); }
+        .btn-outline { background: transparent; color: var(--text-main); border-color: var(--border); }
+        .btn-outline:hover { border-color: var(--bronze); color: var(--bronze); }
 
         .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
@@ -136,43 +135,43 @@
     <nav>
         <a href="#" class="nav-logo">Samia Said Hassani <span>x Catalina</span></a>
         <div class="nav-links">
-            <a href="#vision">Vision Data</a>
+            <a href="#vision">Compétences</a>
             <a href="#parcours">Parcours</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <header class="hero">
-        <p class="hero-subtitle">M2 Data Science Paris-Saclay — Retail & Shopper Analytics</p>
-        <h1 class="hero-title">Data Analyst Retail</h1>
-        <a href="#vision" class="hero-btn">Découvrir mon profil</a>
+        <p class="hero-subtitle">M2 Data Science Paris-Saclay — Retail & Analytics</p>
+        <h1 class="hero-title">Data Analyst</h1>
+        <a href="#vision" class="hero-btn">Découvrir mon travail</a>
     </header>
 
     <section id="vision" class="reveal">
         <div class="vision-quote">
-            <p>"Transformer des volumes massifs de transactions en leviers stratégiques clairs pour orienter les décisions marketing et la performance commerciale."</p>
-            <span>La rigueur de la donnée client au service du retail</span>
+            <p>« Transformer les volumes de transactions en analyses claires pour guider les décisions marketing et les ventes. »</p>
+            <span>La donnée retail au service de la performance</span>
         </div>
         
         <div class="synergy-container">
             <div class="syn-card">
-                <h3>Expertise Technique & Retail</h3>
-                <p>Une maîtrise solide des environnements complexes pour analyser le comportement d'achat :</p>
+                <h3>Savoir-faire Technique</h3>
+                <p>Les outils que j'utilise au quotidien pour traiter et valoriser les données :</p>
                 <ul>
-                    <li><strong>SQL & Requêtage Avancé :</strong> Extraction, requêtes complexes (CTE, agrégats, jointures) sur de fortes volumétries de données.</li>
-                    <li><strong>Analyse Exploratoire (EDA) :</strong> Traitement des données, détection d'anomalies, étude des distributions et segmentations clients.</li>
-                    <li><strong>Reporting & Power BI :</strong> Industrialisation de tableaux de bord décisionnels et suivi des indicateurs clés de performance.</li>
-                    <li><strong>Python & Automation :</strong> Automatisation de flux complexes, règles métiers et modélisation prédictive sous GCP.</li>
+                    <li><strong>SQL & Grandes Volumétries :</strong> Écriture de requêtes complexes (CTE, jointures, agrégations) pour nettoyer et extraire des jeux de données d'achat.</li>
+                    <li><strong>Analyse Exploratoire (EDA) :</strong> Traitement des données brutes, détection d'anomalies, étude des distributions et segmentations clients.</li>
+                    <li><strong>Power BI :</strong> Création de tableaux de bord simples, lisibles et directement exploitables par les équipes métiers.</li>
+                    <li><strong>Python & GCP :</strong> Écriture de scripts pour automatiser les traitements, manipuler les données et entraîner des modèles.</li>
                 </ul>
             </div>
 
             <div class="syn-card">
-                <h3>Atouts pour le Pôle Analytics</h3>
-                <p>Mon positionnement pour accompagner vos équipes et soutenir la performance des enseignes :</p>
+                <h3>Approche Métier</h3>
+                <p>Ce que j'apporte dans le travail au quotidien avec les équipes :</p>
                 <ul>
-                    <li><strong>Culture Retail Éprouvée :</strong> Un an d'expérience concrète aux Galeries Lafayette au plus près des problématiques d'invendus, de stocks et de vente.</li>
-                    <li><strong>Pédagogie & Vulgarisation :</strong> Capacité à restituer des résultats complexes de manière claire et actionnable pour les équipes commerciales et marketing.</li>
-                    <li><strong>Modélisation & ML :</strong> Solide bagage en statistiques (scikit-learn, régressions, classification) issu du M2 ISADS (Paris-Saclay).</li>
+                    <li><strong>Expérience Retail :</strong> Un an aux Galeries Lafayette sur des problématiques réelles de vente, de stock et de comportements clients.</li>
+                    <li><strong>Pédagogie & Échange :</strong> Habitude de traduire des résultats techniques en explications simples pour les équipes commerciales et marketing.</li>
+                    <li><strong>Rigueur Statistique :</strong> Des bases solides en modélisation et en méthodes d'analyse issues de mon M2 ISADS (Paris-Saclay).</li>
                 </ul>
             </div>
         </div>
@@ -183,36 +182,36 @@
             <div class="image-elegance"></div>
 
             <div class="ed-text">
-                <h2>L'Expertise par l'Action</h2>
+                <h2>Parcours & Projets</h2>
                 <p class="drop-cap">A</p>
-                <p class="intro">utonome et rigoureuse, je conçois des solutions décisionnelles où la technique répond directement aux enjeux de performance et d'orientation commerciale.</p>
+                <p class="intro">utonome et méthodique, je conçois des outils d'analyse et de suivi adaptés aux besoins des équipes terrain.</p>
                 
                 <div class="experience-block">
                     <h4>Sept. 2025 – Sept. 2026</h4>
                     <h3>Data Analyst / Scientist — Galeries Lafayette</h3>
-                    <p>Analyse exploratoire approfondie (EDA) des données ventes et stocks. Conception de modèles prédictifs (invendus) et développement de dashboards Power BI de pilotage sous GCP et SQL.</p>
+                    <p>Analyse exploratoire des données de vente et de stock. Développement de modèles prédictifs et mise en place de tableaux de bord Power BI sous GCP et SQL.</p>
                 </div>
 
                 <div class="experience-block">
                     <h4>Fév. 2025 – Juil. 2025</h4>
                     <h3>Data Scientist — Orange</h3>
-                    <p>Automatisation End-to-End d'un processus métier via une web app analytique (Python, Streamlit, PostgreSQL), générant un impact chiffré direct de 140 k€/mois d'économies.</p>
+                    <p>Développement en autonomie d'une application d'automatisation (Python, Streamlit, PostgreSQL) permettant d'économiser 140 k€/mois sur un processus métier.</p>
                 </div>
 
                 <div class="experience-block">
                     <h4>Sept. 2024 – Sept. 2026</h4>
                     <h3>Master ISADS — Univ. Paris-Saclay</h3>
-                    <p>M2 Ingénierie Statistique, Actuariat et Data Science. Formation poussée en Machine Learning, statistiques inférentielles, séries temporelles et SQL.</p>
+                    <p>Ingénierie Statistique et Data Science. Formation axée sur le Machine Learning, l'analyse de données et le requêtage SQL.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="values-section reveal">
-        <h2>Un Impact Prouvé</h2>
+        <h2>Recommandations</h2>
         <div class="values-grid">
             <div class="value-card">
-                <p>« Elle a mené le projet avec rigueur, professionnalisme et un grand sens de l'initiative. Elle laisse derrière elle un outil fonctionnel, utile et bien documenté. »</p>
+                <p>« Elle a mené le projet avec rigueur, professionnalisme et un grand sens de l'initiative. Elle laisse derrière elle un outil fonctionnel et très utile. »</p>
                 <h4>— O. Becker, Responsable Rémunération, Orange</h4>
             </div>
             <div class="value-card">
@@ -223,20 +222,20 @@
     </section>
 
     <section id="contact" class="contact-section reveal" style="padding-top: 100px; padding-bottom: 100px;">
-        <h2 style="font-family: 'Bodoni Moda', serif; font-size: 2.2rem; margin-bottom: 40px; color: var(--white);">Échangeons sur vos projets</h2>
+        <h2 style="font-family: 'Bodoni Moda', serif; font-size: 2.2rem; margin-bottom: 40px; color: var(--text-main);">Me contacter</h2>
 
         <div class="contact-info">
-            <a href="tel:0664206321">Téléphone</a>
+            <a href="tel:0664206321">06 64 20 63 21</a>
             <a href="mailto:samia.saidhassani@gmail.com">Email</a>
             <a href="https://linkedin.com/in/samia-said-hassani-71057420b" target="_blank">LinkedIn</a>
         </div>
 
         <div class="download-box">
-            <h3 style="font-family: 'Bodoni Moda', serif; font-size: 1.8rem; margin-bottom: 20px; color: var(--white);">Dossier de Candidature</h3>
-            <p style="color: var(--gray); margin-bottom: 30px;">Consultez mon CV complet et mes recommandations professionnelles certifiées.</p>
+            <h3 style="font-family: 'Bodoni Moda', serif; font-size: 1.8rem; margin-bottom: 20px; color: var(--text-main);">Documents de candidature</h3>
+            <p style="color: var(--text-muted); margin-bottom: 30px;">Consultez mon CV ainsi que mes lettres de recommandation.</p>
             
             <div>
-                <a href="CV_Samia_Said_Hassani_DA.pdf" target="_blank" class="btn-download">Mon CV (PDF)</a>
+                <a href="CV_Samia_Data.pdf" target="_blank" class="btn-download">Mon CV (PDF)</a>
                 <a href="Lettre Reco SSH.pdf" target="_blank" class="btn-download btn-outline">Reco Galeries Lafayette</a>
                 <a href="Lettre de recommandation Samia.pdf" target="_blank" class="btn-download btn-outline">Reco Orange</a>
             </div>
